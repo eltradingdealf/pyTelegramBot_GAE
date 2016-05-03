@@ -1,6 +1,8 @@
 #!C:/DEV/Python27
 # -*- coding: utf-8 -*-
-""" Este programa incorpora un comando para enviar
+""" Este programa escucha mensajes al bot y
+    responde con otro mensaje.
+    ???Todavia no me funciona el 'message_handler'
     Nombre del bot de Telegram: eltradingdealf_bot
     Usuario de bot: eltradingdealf
     Token del bot: Se obtiene de config.cfg
@@ -138,6 +140,7 @@ else:
 printM1('program terminating')
 
 
+#???No funciona todavia
 @telegram.message_handler(commands=['chat', 'corre'])
 def chat(mensaje_telegram):
 
