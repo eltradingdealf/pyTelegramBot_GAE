@@ -17,7 +17,7 @@ import os
 
 #Constantes
 FILE_CONFIG_APP = "config.cfg"
-TEST_MESSAGE = "/send envio de mensaje-4";
+TEST_MESSAGE = "/chat my chateo";
 
 #globals
 chatID = 0
@@ -45,12 +45,13 @@ def readTokenFromConfigFile():
     try:
         cfg = ConfigParser.ConfigParser()
         cfg.read([FILE_CONFIG_APP])
-
+        print cfg.sections()
         print '\n***'
         print 'Config file readed'
         print '***'
-    except Exception:
+    except Exception as ex:
         print 'Error obteniendo archivo de config'
+        repr(ex)
 
     return cfg
 #fin readTokenFromConfigFile
